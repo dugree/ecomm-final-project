@@ -9,6 +9,7 @@ gem 'sqlite3'
 gem 'activeadmin'
 gem 'compass-rails'
 gem 'zurb-foundation'
+gem "paperclip"
 
 
 # Gems used only for assets and not required
