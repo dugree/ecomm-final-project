@@ -2,7 +2,7 @@ Finalproject::Application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
 
-  root :to => 'info#index'
+  root :to => 'products#index'
 
   match 'products'        => 'products#index',    :as => 'search'
   match 'products/:id'    => 'products#show',     :as => 'product', :via => :get

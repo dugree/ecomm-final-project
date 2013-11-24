@@ -7,5 +7,5 @@ class Product < ActiveRecord::Base
   validates :stock,                               :numericality => { :greater_than_or_equal_to => 0 }
 
   has_many :order_products
-  belongs_to :category
+  belongs_to :subcategory
 end
