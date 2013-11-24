@@ -27,3 +27,15 @@ nav {
 	}
 }
 
+.product {
+	border:1px solid black;
+	text-align:center;
+	display:inline-block;
+	margin:5px;
+	border-radius: 7px;
+	background: #DDDDFF;
+
+	.image {
+		height:150px;
+	}
+}
