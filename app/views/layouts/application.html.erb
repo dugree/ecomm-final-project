@@ -29,7 +29,7 @@
       </ul>
       <% @categories.each do |category| %>
       
-        <a href="#" data-dropdown="hover<%= category.id %>" data-options="is_hover:true"><%= category.name %></a>
+        <a href="#" data-dropdown="hover<%= category.id %>" class="button" data-options="is_hover:true"><%= category.name %></a>
 
         <ul id="hover<%= category.id %>" class="f-dropdown" data-dropdown-content>
           <% category.subcategories.each do |sub| %>
