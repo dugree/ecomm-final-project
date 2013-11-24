@@ -25,7 +25,12 @@
   <body>
     <nav class="top-bar">
       <ul class="title-area">
-        <li class="name">Dustin's Guitars</li>
+        <li class="name"><%= link_to "Dustin's Guitars", root_url %></li>
+      </ul>
+      <ul class="right">
+        <li>
+          <%= render "products/search" %>
+        </li>
       </ul>
     </nav>
     <%= yield %>

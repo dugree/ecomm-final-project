@@ -4,7 +4,9 @@ Finalproject::Application.routes.draw do
 
   root :to => 'info#index'
 
-  match 'products/:id' => 'products#show',  :as => 'product', :via => :get
+  match 'products'        => 'products#index',    :as => 'search'
+  match 'products/:id'    => 'products#show',     :as => 'product', :via => :get
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

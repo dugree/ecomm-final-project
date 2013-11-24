@@ -1,0 +1,4 @@
+<%= search_form_for @search, :url => search_path do |f| %>
+  <%= f.text_field :name_cont, :placeholder => "Search Products" %>
+  <%= f.submit "search" %>
+ <% end %>

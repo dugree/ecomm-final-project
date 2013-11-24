@@ -1,5 +1,5 @@
 <section class="product">
 	<h2><%= link_to product.name, product %></h2>
-	<div class="image"><%= image_tag product.image.url(:thumb) %></div>
+	<div class="image"><%= link_to image_tag(product.image.url(:thumb)), product %></div>
 	<p class="price">Price: <%= number_to_currency(product.price, :unit => "$") %></p> 
 </section>

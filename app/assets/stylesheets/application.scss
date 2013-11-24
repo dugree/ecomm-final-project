@@ -14,3 +14,16 @@
  */
 
 @import "foundation_and_overrides";
+
+
+nav {
+	#product_search{
+		input {
+			display:inline;
+		}
+		#q_name_cont{
+			width:200px;
+		}
+	}
+}
+
