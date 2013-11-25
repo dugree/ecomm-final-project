@@ -27,26 +27,27 @@
       <ul class="title-area">
         <li class="name"><%= link_to "Dustin's Guitars", root_url %></li>
       </ul>
-      <% @categories.each do |category| %>
-      
-        <a href="#" data-dropdown="hover<%= category.id %>" class="button" data-options="is_hover:true"><%= category.name %></a>
+      <ul class="left">
+        <li class="has-dropdown">
+          <% @categories.each do |category| %>
+          
+            <a href="#" data-dropdown="hover<%= category.id %>" class="button" data-options="is_hover:true"><%= category.name %></a>
 
-        <ul id="hover<%= category.id %>" class="f-dropdown" data-dropdown-content>
-          <% category.subcategories.each do |sub| %>
-            <li><a href="#"><%= link_to sub.name, sub %></li>
-          <% end %>
-        </ul>
-      <% end %>
-
+            <ul id="hover<%= category.id %>" class="f-dropdown" data-dropdown-content>
+              <% category.subcategories.each do |sub| %>
+                <li><a href="#"><%= link_to sub.name, sub %></li>
+              <% end %>
+            </li>
+          </ul>
+        <% end %>
+      </ul>
       <ul class="right">
         <li>
           <%= render "products/search" %>
         </li>
       </ul>
     </nav>
-    <%= yield %>
-
-    
+        <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

@@ -3,4 +3,5 @@ class Order < ActiveRecord::Base
 
   validates :customer_id, :status_id,      :presence => true
   belongs_to :customer
+  belongs_to :status
 end
