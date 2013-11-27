@@ -9,6 +9,7 @@ Finalproject::Application.routes.draw do
 
   match 'subcategory/:id'  => 'subcategories#index', :as => 'subcategory', :via => :get
   match 'customer'   => 'customers#index',    :as => 'customers', :via => :get
+  match 'customer'   => 'customers#create',   :as => 'customer_create', :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
