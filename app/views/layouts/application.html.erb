@@ -48,8 +48,11 @@
       </ul>
     </nav>
     <section role="main">
-        <%= yield %>
-      </section>
+      <% flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, class: name %>
+      <% end -%>
+      <%= yield %>
+    </section>
     <%= javascript_include_tag "application" %>
   </body>
 </html>

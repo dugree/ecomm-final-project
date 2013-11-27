@@ -10,7 +10,8 @@ class CustomersController < ApplicationController
       redirect_to root_path
     else
       flash[:alert] = "Order failed"
-      render :customer_form
+      redirect_to customers_path
     end
   end
 end
+
