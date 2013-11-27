@@ -1,0 +1,5 @@
+<h1>Create Order</h1>
+<%= semantic_form_for @customer do |f| %>
+  <%= f.inputs :name, :email, :address, :city, :postal_code, :province %>
+  <%= f.actions :submit, :value => "submit"  %>
+<% end %>

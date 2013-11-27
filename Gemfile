@@ -11,6 +11,7 @@ gem 'compass-rails'
 gem 'zurb-foundation'
 gem "paperclip"
 gem 'ransack'
+gem 'formtastic'
 
 
 # Gems used only for assets and not required

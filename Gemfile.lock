@@ -177,6 +177,7 @@ DEPENDENCIES
   activeadmin
   coffee-rails (~> 3.2.1)
   compass-rails
+  formtastic
   jquery-rails
   paperclip
   rails (= 3.2.13)
