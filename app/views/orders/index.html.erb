@@ -1,0 +1,19 @@
+<div class="row">
+	<div class="small-11 small-centered-columns product">
+		<h1>Review Order</h1>
+		<table id="order-review">
+		  <tr>
+		  	<th>Item</th>
+		  	<th>Price</th>
+		  	<th>Quantity</th>
+		  </tr>
+		<% @items.each do |item| %>
+		  <tr>
+		  	<td><%= Product.find(item['id']).name %></td>
+		  	<td><%= Product.find(item['id']).price %></td>
+		  	<td><%= number_field_tag "quantity#{item['id']}", item['quantity'] %></td>	
+		  </tr>
+		<% end %>
+		</table>
+	</div>
+</div>
