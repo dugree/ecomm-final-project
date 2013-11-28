@@ -17,7 +17,11 @@ class CustomersController < ApplicationController
             new_item.product = Product.find(item_id)
             new_item.price = Product.find(item_id).price
             new_item.quantity = quantity
-            new_item.save
+            if new_item.save
+            else
+              flash[:alert] = "Order failed"
+              redirect_to customers_path              
+            end
           end
         end
         flash[:success] = "Order submitted"
