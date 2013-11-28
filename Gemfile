@@ -12,6 +12,7 @@ gem 'zurb-foundation'
 gem "paperclip"
 gem 'ransack'
 gem 'formtastic'
+gem 'kaminari'
 
 
 # Gems used only for assets and not required

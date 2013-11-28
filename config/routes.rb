@@ -11,6 +11,8 @@ Finalproject::Application.routes.draw do
   match 'customer'   => 'customers#index',    :as => 'customers', :via => :get
   match 'customer'   => 'customers#create',   :as => 'customer_create', :via => :post
 
+  match 'order/:id'      => 'orders#add',         :as => 'order_add', :via => :get
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,4 +1,6 @@
 <%= search_form_for @search, :url => search_path do |f| %>
   <%= f.text_field :name_cont, :placeholder => "Search Products" %>
+  <%= f.select :subcategory_id_eq, options_from_collection_for_select(Subcategory.all, "id", "name", @search.subcategory_id_eq), { :include_blank => "" } %>
+
   <%= f.submit "search" %>
  <% end %>
