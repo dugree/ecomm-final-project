@@ -22,7 +22,7 @@
     
   </head>
 
-  <body>
+  <body id="body">
     <nav class="top-bar">
       <ul class="title-area">
         <li class="name"><%= link_to "Dustin's Guitars", root_url %></li>
@@ -40,6 +40,7 @@
             </li>
           </ul>
         <% end %>
+        <%= link_to "View Cart", order_create_path, :class => "button" %>
       </ul>
       <ul class="right">
         <li>
@@ -47,12 +48,14 @@
         </li>
       </ul>
     </nav>
-    <section role="main">
+
+      <div id="wrapper" class="row">
       <% flash.each do |name, msg| -%>
         <%= content_tag :div, msg, class: name %>
       <% end -%>
       <%= yield %>
-      </section>
+    </div>
+
     <%= javascript_include_tag "application" %>
   </body>
 </html>

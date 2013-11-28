@@ -15,6 +15,20 @@
 *{box-sizing: border-box;}
 @import "foundation_and_overrides";
 
+#body {
+	background-color: $body-bg;
+}
+
+
+	#wrapper {
+		background-color: #FFFFFF;
+		text-align: center;
+		border-radius:5px;
+		box-shadow:10px 10px 5px darken($primary-color,10%);	
+	}
+
+
+
 h1 {
 	text-align:center;
 }
@@ -41,24 +55,50 @@ nav {
 	}
 }
 
+.orderbox  {
+	margin:0px auto;
+}
 
-	.product {
-		border:1px solid black;
-		display:inline-block;
-		border-radius: 7px;
-		background: #DDDDFF;
-		margin: 5px;
-		.product-text {
-			float:left;
-		}
-		.image {
-			float:right;
-			margin:7px;
-		}
-
-
-
+.databox {
+	text-align:left;
+	margin:0px auto;
+	ul {
+		list-style:none;
 	}
+	.imagefull {
+		margin:0px auto;
+		display:block;
+		text-align:center;
+		img {
+			border:1px solid black;
+			border-radius:3px;
+			margin-top:10px;
+			box-shadow:10px 10px 5px $secondary-color;
+		}
+	}
+
+	p {
+		margin-left:5px;
+	}
+}
+
+.product {
+	border:1px solid black;
+	display:inline-block;
+	border-radius: 7px;
+	background: lighten($primary-color, 20%);
+	margin: 5px;
+	.product-text {
+		float:left;
+	}
+	.image {
+		float:right;
+		margin:7px;
+	}
+
+
+
+}
 
 
 .formtastic {
