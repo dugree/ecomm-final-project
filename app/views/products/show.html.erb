@@ -6,7 +6,7 @@
 		</div>
 		<p><%= raw @product.description %></p>
 		<h3><%= number_to_currency(@product.price, :unit => "$") %></h3>
-		<%= link_to 'Buy', :controller => 'orders', :action => 'buy' %>
-		<%= link_to 'Add to Cart', :controller => 'orders', :action => 'add' %>
+		<%= link_to 'Buy', {:controller => 'orders', :action => 'buy'}, {:class => 'button'} %>
+		<%= link_to 'Add to Cart', { :controller => 'orders', :action => 'add' }, {:class => 'button' }%>
 	</div>
 </div>
