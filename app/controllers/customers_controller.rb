@@ -8,6 +8,9 @@ class CustomersController < ApplicationController
     if @customer.save
       order = Order.new
       order.customer = @customer
+      order.pst_rate = @customer.province.pst
+      order.gst_rate = @customer.province.gst
+      order.hst_rate = @customer.province.hst
       order.status = Status.find(1)
       if order.save
         session.each do |item_id, quantity|

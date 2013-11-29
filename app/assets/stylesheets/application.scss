@@ -20,13 +20,15 @@
 }
 
 
-	#wrapper {
-		margin-top:15px;
-		background-color: #FFFFFF;
-		text-align: center;
-		border-radius:5px;
-		box-shadow:10px 10px 5px darken($primary-color,10%);	
-	}
+
+
+#wrapper {
+	margin-top:15px;
+	background-color: #FFFFFF;
+	text-align: center;
+	border-radius:5px;
+	box-shadow:10px 10px 5px darken($primary-color,10%);	
+}
 
 
 
@@ -96,6 +98,10 @@ nav {
 		float:right;
 		margin:7px;
 	}
+	p {
+		text-align:left;
+		margin-left:10px;
+	}
 
 
 
@@ -113,4 +119,11 @@ nav {
 	select {
 		width:330px;
 	}
+}
+
+.number-field {
+	padding:0px;
+	height:50px;
+	margin:0px;
+	color:#000;
 }

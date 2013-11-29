@@ -22,4 +22,13 @@ class OrdersController < ApplicationController
 
   def create
   end
+
+  def generate
+    params.each do |key, value|
+      if key[0..7] == 'quantity'
+        session[key[8,20]] = value
+      end
+    end
+    redirect_to customers_path
+  end
 end
