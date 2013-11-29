@@ -10,7 +10,8 @@ class OrdersController < ApplicationController
   end
 
   def add
-    session[params[:id]] = 1
+    session[params[:id]] = 
+    flash[:success] = "Item added to cart"
     redirect_to root_path
   end
 
