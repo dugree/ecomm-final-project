@@ -5,6 +5,9 @@ Finalproject::Application.routes.draw do
   root :to => 'products#index' 
 
   match 'products'        => 'products#index',    :as => 'search'
+  match 'products/view_new' => 'products#view_new', :as => 'new_products', :via => :get
+  match 'products/view_recently_updated' => 'products#view_recently_updated', :as => 'recently_updated_products', :via => :get
+
   match 'products/:id'    => 'products#show',     :as => 'product', :via => :get
 
   match 'subcategory/:id'  => 'subcategories#index', :as => 'subcategory', :via => :get
@@ -15,6 +18,7 @@ Finalproject::Application.routes.draw do
   match 'order/confirm'  => 'orders#generate',   :as => 'order_generate', :via => :post      
   match 'order/:id'      => 'orders#add',         :as => 'order_add', :via => :get
   match 'order/new/:id'      => 'orders#buy',         :as => 'order_buy', :via => :get
+
 
 
   # The priority is based upon order of creation:

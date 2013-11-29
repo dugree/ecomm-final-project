@@ -40,6 +40,8 @@
             </li>
           </ul>
         <% end %>
+        <%= link_to "New Products", new_products_path, :class => "button" %>
+        <%= link_to "Recently Updated", recently_updated_products_path, :class => "button" %>
         <%= link_to "View Cart", order_create_path, :class => "button" %>
       </ul>
       <ul class="right">
